@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "201cc0f3-9a80-4dc0-9c88-25184ecdedc7",
+		"name": "empresta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Instituições",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/instituicoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"instituicoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convênios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/convenios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"convenios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simulador",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"valor_emprestimo\" : 5000.00,\n    \"parcela\" : 60,\n    \"instituicoes\" : [\n        \"PAN\",\n        \"OLE\",\n        \"BMG\"\n    ],\n    \"convenios\" : [\n        \"INSS\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/simulador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"simulador"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
